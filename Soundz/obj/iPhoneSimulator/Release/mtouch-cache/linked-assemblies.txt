@@ -1,0 +1,11 @@
+RemoveDynamicRegistrar:false
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Soundz.exe
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/mscorlib.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Xamarin.iOS.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/Mono.Security.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Xml.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Numerics.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Core.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Net.Http.dll
+/Users/matejmicek/Soundz/Soundz/bin/iPhoneSimulator/Release/Soundz.app:/Users/matejmicek/Soundz/Soundz/obj/iPhoneSimulator/Release/mtouch-cache/1-Link/System.Drawing.Common.dll

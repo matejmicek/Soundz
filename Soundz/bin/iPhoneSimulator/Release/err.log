@@ -1,0 +1,9 @@
+MonoTouch: Could not install sigaction override, unexpected sigaction implementation.
+2020-08-24 10:55:09.160968+0200 Soundz[10060:508527] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=10060
+2020-08-24 10:55:09.161232+0200 Soundz[10060:508527] SecTaskCopyDebugDescription: Soundz[10060]/0#-1 LF=0
+2020-08-24 10:55:09.167521+0200 Soundz[10060:508527] SecTaskLoadEntitlements failed error=22 cs_flags=200, pid=10060
+2020-08-24 10:55:09.167732+0200 Soundz[10060:508527] SecTaskCopyDebugDescription: Soundz[10060]/0#-1 LF=0
+2020-08-24 10:55:09.319431+0200 Soundz[10060:508527] Finished with Extractor init.
+2020-08-24 10:55:09.319685+0200 Soundz[10060:508545] starting session confeg.
+2020-08-24 10:55:09.321821+0200 Soundz[10060:508545] 
+2020-08-24 10:55:09.321965+0200 Soundz[10060:508545] device is null

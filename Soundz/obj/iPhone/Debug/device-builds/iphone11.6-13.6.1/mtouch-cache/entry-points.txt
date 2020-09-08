@@ -1,0 +1,69 @@
+Function=SystemNative_ConvertErrorPlatformToPal
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ConvertErrorPalToPlatform
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_StrErrorR
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetNonCryptographicallySecureRandomBytes
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_OpenDir
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetReadDirRBufferSize
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_ReadDirR
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_CloseDir
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEGid
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_GetEUid
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_MkDir
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Stat2
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_LStat2
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=SystemNative_Unlink
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_local_name
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_timezone_get_data
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_GetFolderPath
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_log
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/mscorlib.dll
+Function=xamarin_find_protocol_wrapper_type
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_release_block_on_main_thread
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=xamarin_get_block_descriptor
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=UIApplicationMain
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/Xamarin.iOS.dll
+Function=NetSecurityNative_ReleaseGssBuffer
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMinorStatus
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DisplayMajorStatus
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportUserName
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ImportPrincipalName
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseName
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredSpNego
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitiateCredWithPassword
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_ReleaseCred
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_InitSecContext
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=NetSecurityNative_DeleteSecContext
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=xamarin_start_wwan
+	/Users/matejmicek/Soundz/Soundz/obj/iPhone/Debug/device-builds/iphone11.6-13.6.1/mtouch-cache/1-Link/System.dll
+Function=mono_pmip

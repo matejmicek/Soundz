@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{583D22CD-1269-4F35-8E94-CFBFB59F0CD0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Soundz/MusicProcessor.cs">
+    <Files>
+      <File FileName="Soundz/ViewController.cs" Line="15" Column="39" />
+      <File FileName="Soundz/Main.cs" />
+      <File FileName="Soundz/ObjectsProcessor.cs" />
+      <File FileName="Soundz/FrameExtractor.cs" />
+      <File FileName="Soundz/MusicProcessor.cs" Line="61" Column="43" />
+      <File FileName="Soundz/CustomObjectsProcessor.cs" />
+      <File FileName="Soundz/Constants.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Soundz" expanded="True">
+            <Node name="Soundz" expanded="True">
+              <Node name="sounds" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>sound_url</Value>
+          <Value>r_p</Value>
+          <Value>previous_color</Value>
+          <Value>current_color</Value>
+          <Value>hue</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Soundz PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F8B5F3F0-4D74-42A5-B77E-473A7D3DA019" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
