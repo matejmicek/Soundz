@@ -17,7 +17,7 @@ namespace Soundz
 {
     public class ObjectsProcessor
     {
-        static string subscriptionKey = "";
+        static string subscriptionKey = "af87c9b4ff1a4a53ba4c55e77c60a772";
         static string endpoint = "https://soundzsoundz.cognitiveservices.azure.com/";
         ComputerVisionClient client;
         public bool busy;

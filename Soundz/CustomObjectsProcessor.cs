@@ -24,7 +24,7 @@ namespace Soundz
 
         public CustomObjectsProcessor(List<string> supported_items)
         {
-            endpoint = new CustomVisionPredictionClient(new ApiKeyServiceClientCredentials(""))
+            endpoint = new CustomVisionPredictionClient(new ApiKeyServiceClientCredentials("2d82e21ce48d4465aae842adf5d78598"))
             {
                 Endpoint = "https://westeurope.api.cognitive.microsoft.com/"
             };
