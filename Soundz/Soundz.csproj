@@ -158,10 +158,6 @@
       <BundleResource Include="sounds\B.wav" />
       <BundleResource Include="sounds\C.wav" />
       <BundleResource Include="sounds\sluchatka.wav" />
-      <BundleResource Include="dog_and_owner.jpg" />
-      <BundleResource Include="pot.jpeg" />
-      <BundleResource Include="microsoft.jpg" />
-      <BundleResource Include="shirt.jpg" />
       <BundleResource Include="sounds\1.wav" />
       <BundleResource Include="sounds\2.wav" />
       <BundleResource Include="sounds\3.wav" />
