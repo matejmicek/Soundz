@@ -4,27 +4,40 @@ using System.Collections.Generic;
 using System.IO;
 namespace Soundz
 {
+    /// <summary>
+    /// Static utils class.
+    /// </summary>
     public static class Utils
     {
-        public static void Print(object o)
-        {
-            Console.WriteLine(o);
-        }
 
-        public static List<string> GetSupportedSounds()
+        /// <summary>
+        /// Scans the sounds directory and findes names that are supported
+        /// for object recognition.
+        /// </summary>
+        /// <returns>List of supported sounds e.g. [dog, cat, table]</returns>
+        public static List<string> GetSupportedSounds(string dir)
         {
             List<string> file_names = new List<string>();
 
-            foreach (string file_path in Directory.GetFiles("sounds"))
+            foreach (string file_path in Directory.GetFiles(dir))
             {
-                string[] parts = file_path.Split("/");
-                string file_name = parts[parts.Length - 1].Split('.')[0];
-                file_names.Add(file_name);
+                if (file_names.Contains(".acc") || file_path.Contains(".wav"))
+                {
+                    string[] parts = file_path.Split("/");
+                    string file_name = parts[parts.Length - 1].Split('.')[0];
+                    file_names.Add(file_name);
+                }
+                
             }
 
             return file_names;
         }
 
-       
+        public static string GetFileName(string name)
+        {
+            return Path.Combine(Path.GetTempPath(), $"{name}.aac");
+        }
+
+
     }
 }

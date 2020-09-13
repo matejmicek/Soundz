@@ -9,6 +9,10 @@ using System.Collections.Generic;
 
 namespace Soundz
 {
+    /// <summary>
+    /// Everything that has something to do with music processing.
+    /// Mostly deals with playing colors.
+    /// </summary>
     public class MusicProcessor
     {
         // maps numbers 0 .. number_of_sounds - 1 to sounds in sounds folder 1..number_of_sounds.wav

@@ -14,9 +14,17 @@ namespace Soundz
     [Register ("ViewController")]
     partial class ViewController
     {
+        [Action ("CustomObjectRecognitionChanged:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void CustomObjectRecognitionChanged (UIKit.UISwitch sender);
+
         [Action ("ObjectRecognitionChanged:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void ObjectRecognitionChanged (UIKit.UISwitch sender);
+
+        [Action ("UIButton399_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UIButton399_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {

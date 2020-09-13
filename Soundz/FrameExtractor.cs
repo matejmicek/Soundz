@@ -3,11 +3,9 @@ using Foundation;
 using AVFoundation;
 using CoreFoundation;
 using UIKit;
-using Soundz;
 using CoreMedia;
-using Xamarin.Essentials;
 using CoreImage;
-using System.Collections.Generic;
+using System.IO;
 
 
 
@@ -37,8 +35,9 @@ namespace Soundz
         private CustomObjectsProcessor customObjectsProcessor;
         private ObjectsProcessor objectsProcessor;
         // if the user has enabled object recognition
-        public bool objectRecognition = false;
-
+        public bool generalObjectRecognition = false;
+        public bool customObjectRecognition = false;
+        public bool recording = false;
         
         public FrameExtractor(UIView view): base()
         {
@@ -47,9 +46,30 @@ namespace Soundz
             sessionQueue.DispatchAsync(ConfigureSession);
             sessionQueue.DispatchAsync(captureSession.StartRunning);
             musicProcessor = new MusicProcessor(26);
-            var supported_sounds = Utils.GetSupportedSounds();
-            customObjectsProcessor = new CustomObjectsProcessor(supported_sounds);
-            objectsProcessor = new ObjectsProcessor(supported_sounds);
+
+            var supported_sounds = Utils.GetSupportedSounds("sounds");
+
+            Console.WriteLine("supported sounds");
+            foreach (string s in supported_sounds)
+            {
+                Console.WriteLine(s);
+            }
+            var supported_recordings = Utils.GetSupportedSounds(Path.GetTempPath());
+
+            Console.WriteLine("supported recordings");
+            foreach (string s in supported_recordings)
+            {
+                Console.WriteLine(s);
+            }
+            customObjectsProcessor = new CustomObjectsProcessor(supported_sounds, supported_recordings);
+            objectsProcessor = new ObjectsProcessor(supported_sounds, supported_recordings);
+        }
+
+
+        public void AddSupportedRecording(string filePath, string name)
+        {
+            customObjectsProcessor.AddSupportedRecording(filePath, name);
+            objectsProcessor.AddSupportedRecording(filePath, name);
         }
 
         /// <summary>
@@ -135,9 +155,6 @@ namespace Soundz
         /// <summary>
         /// Callback method for when a new image is recieved from the video.
         /// </summary>
-        /// <param name="captureOutput"></param>
-        /// <param name="sampleBuffer"></param>
-        /// <param name="connection"></param>
         public override void DidOutputSampleBuffer(AVCaptureOutput captureOutput, CMSampleBuffer sampleBuffer, AVCaptureConnection connection)
         {
             var imageBuffer = sampleBuffer.GetImageBuffer();
@@ -148,16 +165,16 @@ namespace Soundz
 
             if (musicProcessor == null)
             {
-                Console.WriteLine("null");
+                Console.WriteLine("Music processor is null. Waiting for init.");
             }
-            else
+            else if (!recording)
             {
                 musicProcessor.PlayColor(current_color, previous_color);
             }
 
             previous_color = current_color;
 
-            if (objectRecognition)
+            if (!recording)
             {
                 // we intentionally do not await these methods since it would
                 // prohibit the rest of the app from working.
@@ -167,12 +184,12 @@ namespace Soundz
                 // we handle the busy part here since if we handled it in PlayObjects
                 // it would overcrowd the threads for async calls.
 
-                if (!objectsProcessor.busy)
+                if (generalObjectRecognition && !objectsProcessor.busy)
                 {
                     objectsProcessor.PlayObjects(cgImage);
                 }
 
-                if (!customObjectsProcessor.busy)
+                if (customObjectRecognition && !customObjectsProcessor.busy)
                 {
                     customObjectsProcessor.PlayObjects(cgImage);
                 }

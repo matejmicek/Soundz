@@ -10,10 +10,21 @@ using Soundz;
 
 namespace Soundz
 {
+    /// <summary>
+    /// Deals with all the calculations about color processing.
+    /// Such as extracting rythm from color change or calculating
+    /// the average or dominant color.
+    /// </summary>
     public static class ColorProcessor
     { 
         public enum Colors { Red, Green, Blue };
 
+
+        /// <summary>
+        /// Calculates luminosity
+        /// </summary>
+        /// <param name="color">color input</param>
+        /// <returns>double for luminosity</returns>
         public static double GetLuminosity(UIColor color)
         {
             // L = (1 / 2) x (Max(RGB) + Min(RGB))
@@ -24,6 +35,11 @@ namespace Soundz
         }
 
 
+        /// <summary>
+        /// Calculates saturation of a UIColor.
+        /// </summary>
+        /// <param name="color">color input</param>
+        /// <returns>double representing stauration</returns>
         public static double GetSaturation(UIColor color)
         {
             // If L < 1  |  S = (Max(RGB) — Min(RGB)) / (1 — |2L - 1|)
@@ -42,18 +58,29 @@ namespace Soundz
         }
 
 
+        /// <summary>
+        /// Calculates the rythm based on change in colors.
+        /// Rythm == constant * distance(previous_color, current_color)
+        /// </summary>
+        /// <param name="previous_color">last color that was evaluated</param>
+        /// <param name="current_color">current evaluated color</param>
+        /// <returns>float to represent the rythm</returns>
         public static double GetRythm(UIColor previous_color, UIColor current_color)
         {
             // Distance of the colors in hue pace
-            double basic_pace = 8;
             previous_color.GetHSBA(out nfloat hue1, out _, out _, out _);
             current_color.GetHSBA(out nfloat hue2, out _, out _, out _);
 
             double distance = Math.Pow(Math.Abs(hue1 - hue2), 0.2);
-            return basic_pace * distance;
+            return Constants.BASIC_RYTHM * distance;
         }
 
 
+        /// <summary>
+        /// Gets the dominant color as of max(R,G,B).
+        /// </summary>
+        /// <param name="color">Color input</param>
+        /// <returns>Red, Green or Blue.</returns>
         public static Colors GetDominanctColor(UIColor color)
         {
             color.GetRGBA(out nfloat r, out nfloat g, out nfloat b, out nfloat a);
@@ -78,11 +105,13 @@ namespace Soundz
             }
         }
 
-
+        /// <summary>
+        /// resizes an UIImage to 1% of size
+        /// </summary>
+        /// <param name="image">original image</param>
+        /// <returns>resized image</returns>
         public static UIImage Resize(UIImage image)
         {
-            Stopwatch resize = new Stopwatch();
-            resize.Start();
             CGSize canvas = new CGSize(
                 width: image.Size.Width * 0.1,
                 height: image.Size.Height * 0.1
@@ -90,11 +119,16 @@ namespace Soundz
             UIGraphicsImageRendererFormat format = new UIGraphicsImageRendererFormat();
             UIGraphicsImageRenderer rendered = new UIGraphicsImageRenderer(size: canvas);
             var ret_image = rendered.CreateImage(actions: null);
-            resize.Stop();
-            //Print(resize.Elapsed);
             return ret_image;
         }
 
+
+        /// <summary>
+        /// Resizes an Image to a compact size.
+        /// Dependent on the internal logic.
+        /// </summary>
+        /// <param name="image">original image</param>
+        /// <returns>resized image</returns>
         public static UIImage MaxResizeImage(UIImage image)
         {
             var sourceSize = image.Size;
@@ -109,7 +143,12 @@ namespace Soundz
         }
 
 
-
+        /// <summary>
+        /// Calculates the "average" color of the picture.
+        /// i.e. average color = average R, average G, average B
+        /// </summary>
+        /// <param name="image">CGImage to calculate the average from.</param>
+        /// <returns>average color</returns>
         public static UIColor AverageColor(CGImage image)
         {
             CGImage imageRef = image;
