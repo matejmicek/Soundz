@@ -72,6 +72,18 @@ namespace Soundz
             objectsProcessor.AddSupportedRecording(filePath, name);
         }
 
+        public void RemoveSupportedRecording(string name)
+        {
+            customObjectsProcessor.RemoveSupportedRecording(name);
+            objectsProcessor.RemoveSupportedRecording(name);
+        }
+
+        public void PlayRecordingPreview(string name)
+        {
+            objectsProcessor.tags_to_sounds[name].Play();
+        }
+
+
         /// <summary>
         /// Checks permissions for video usage.
         /// </summary>

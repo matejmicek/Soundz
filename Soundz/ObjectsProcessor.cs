@@ -30,7 +30,7 @@ namespace Soundz
         {
             VisualFeatureTypes.Tags,
         };
-        Dictionary<string, AVAudioPlayer> tags_to_sounds = new Dictionary<string, AVAudioPlayer>();
+        public Dictionary<string, AVAudioPlayer> tags_to_sounds = new Dictionary<string, AVAudioPlayer>();
 
         public ObjectsProcessor(List<string> supported_sounds, List<string> supported_recordings)
         {
@@ -54,8 +54,9 @@ namespace Soundz
             }
             foreach (string supported_recording in supported_recordings)
             {
+                NSData song = NSData.FromUrl(NSUrl.FromFilename(Utils.GetFileName(supported_recording)), NSDataReadingOptions.Uncached, out NSError errr);
                 tags_to_sounds[supported_recording] = new AVAudioPlayer(
-                    Utils.GetFileName(supported_recording),
+                    song,
                     "",
                     out err
                     );
@@ -80,6 +81,11 @@ namespace Soundz
             tags_to_sounds[name].EnableRate = true;
         }
 
+
+        public void RemoveSupportedRecording(string name)
+        {
+            tags_to_sounds.Remove(name);
+        }
 
         /// <summary>
         /// Plays objects found in frames of real time video.

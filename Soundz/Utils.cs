@@ -19,15 +19,16 @@ namespace Soundz
         {
             List<string> file_names = new List<string>();
 
+            Console.WriteLine("filePaths");
             foreach (string file_path in Directory.GetFiles(dir))
             {
-                if (file_names.Contains(".acc") || file_path.Contains(".wav"))
+                Console.WriteLine(file_path);
+                if (file_path.Contains(".aac") || file_path.Contains(".wav"))
                 {
                     string[] parts = file_path.Split("/");
                     string file_name = parts[parts.Length - 1].Split('.')[0];
                     file_names.Add(file_name);
                 }
-                
             }
 
             return file_names;
@@ -37,7 +38,5 @@ namespace Soundz
         {
             return Path.Combine(Path.GetTempPath(), $"{name}.aac");
         }
-
-
     }
 }

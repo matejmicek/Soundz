@@ -1,15 +1,85 @@
 ﻿using System;
 using System.IO;
 using UIKit;
-
-
+using Foundation;
+using System.Collections.Generic;
 
 namespace Soundz
 {
+
+    class TableSource : UITableViewSource
+    {
+
+        public List<string> TableItems;
+        UITableViewController owner;
+        string CellIdentifier = "TableCell";
+        FrameExtractor extractor;
+
+        public TableSource(List<string> items, UITableViewController owner, FrameExtractor extractor)
+        {
+            this.owner = owner;
+            this.TableItems = items;
+            this.extractor = extractor;
+        }
+
+
+        public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, Foundation.NSIndexPath indexPath)
+        {
+            switch (editingStyle)
+            {
+                case UITableViewCellEditingStyle.Delete:
+                    extractor.RemoveSupportedRecording(TableItems[indexPath.Row]);
+                    File.Delete(Utils.GetFileName(TableItems[indexPath.Row]));
+                    TableItems.RemoveAt(indexPath.Row);
+                    tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
+                    break;
+                case UITableViewCellEditingStyle.None:
+                    Console.WriteLine("CommitEditingStyle:None called");
+                    break;
+            }
+        }
+        public override bool CanEditRow(UITableView tableView, Foundation.NSIndexPath indexPath)
+        {
+            return true;
+        }
+        public override string TitleForDeleteConfirmation(UITableView tableView, Foundation.NSIndexPath indexPath)
+        {
+            return "Delete";
+        }
+
+        public override nint RowsInSection(UITableView tableview, nint section)
+        {
+            return TableItems.Count;
+        }
+
+        public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+        {
+            UITableViewCell cell = tableView.DequeueReusableCell(CellIdentifier);
+            string item = TableItems[indexPath.Row];
+
+            //if there are no cells to reuse, create a new one
+            if (cell == null)
+            {
+                cell = new UITableViewCell(UITableViewCellStyle.Default, CellIdentifier);
+            }
+
+            cell.TextLabel.Text = item;
+
+            return cell;
+        }
+
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            extractor.PlayRecordingPreview(TableItems[indexPath.Row]);
+        }
+    }
+
+
     public partial class ViewController : UIViewController
     {
         FrameExtractor frameExtractor;
         AudioRecorder audioRecorder;
+        UITableView table;
 
         public ViewController(IntPtr handle) : base(handle)
         {
@@ -17,6 +87,7 @@ namespace Soundz
         
         public override void ViewDidLoad()
         {
+            
             foreach (var file in Directory.GetFiles(Path.GetTempPath()))
             {
                 Console.WriteLine(file);
@@ -103,6 +174,21 @@ namespace Soundz
                 audioRecorder.recording = true;
             }
 
+        }
+
+        partial void UIButton4919_TouchUpInside(UIButton sender)
+        {
+            UINavigationController nav = new UINavigationController();
+            UITableViewController tab = new UITableViewController();
+            tab.TableView = new UITableView();
+            List<string> tableItems = Utils.GetSupportedSounds(Path.GetTempPath());
+            Console.WriteLine("table items");
+            foreach (string t in tableItems)
+            {
+                Console.WriteLine(t);
+            }
+            tab.TableView.Source = new TableSource(tableItems, tab, frameExtractor);
+            this.PresentViewController(tab, true, null);
         }
     }
 }

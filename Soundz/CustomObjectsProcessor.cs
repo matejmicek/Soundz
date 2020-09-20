@@ -53,7 +53,7 @@ namespace Soundz
             }
             foreach (string supported_recording in supported_recordings)
             {
-                NSData song = NSData.FromUrl(NSUrl.FromFilename(Utils.GetFileName(supported_recording)));
+                NSData song = NSData.FromUrl(NSUrl.FromFilename(Utils.GetFileName(supported_recording)), NSDataReadingOptions.Uncached, out NSError errr);
                 supported_items_to_sounds[supported_recording] = new AVAudioPlayer(
                     song,
                     "",
@@ -74,6 +74,11 @@ namespace Soundz
             supported_items_to_sounds[name] = new AVAudioPlayer(song, "", out NSError err);
             supported_items_to_sounds[name].Volume = 1.0f;
             supported_items_to_sounds[name].EnableRate = true;
+        }
+
+        public void RemoveSupportedRecording(string name)
+        {
+            supported_items_to_sounds.Remove(name);
         }
 
 
