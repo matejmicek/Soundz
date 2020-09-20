@@ -20,25 +20,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="General Object Recognition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="733-qw-uI1">
-                                <rect key="frame" x="20" y="729" width="272" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="General Object Recognition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="733-qw-uI1" misplaced="YES">
+                                <rect key="frame" x="20" y="701.5" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="ObjectRecognition" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-ON-Iu7">
-                                <rect key="frame" x="339" y="729" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="ObjectRecognition" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-ON-Iu7" misplaced="YES">
+                                <rect key="frame" x="339" y="697" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="ObjectRecognition" label="ObjectRecognition"/>
                                 <connections>
                                     <action selector="ObjectRecognitionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="199"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="399">
-                                <rect key="frame" x="20" y="826" width="180" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="399" misplaced="YES">
+                                <rect key="frame" x="20" y="801" width="145" height="45"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="c19-pE-yl7"/>
+                                    <constraint firstAttribute="height" constant="45" id="iKZ-Xv-5lm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Record a sound">
@@ -53,25 +54,26 @@
                                     <action selector="UIButton399_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="400"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom Object Recognition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4713">
-                                <rect key="frame" x="20" y="780" width="272" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom Object Recognition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4713" misplaced="YES">
+                                <rect key="frame" x="20" y="747.5" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" restorationIdentifier="CustomObjectRecognition" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4714">
-                                <rect key="frame" x="339" y="780" width="51" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" restorationIdentifier="CustomObjectRecognition" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4714" misplaced="YES">
+                                <rect key="frame" x="339" y="748" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="ObjectRecognition" label="ObjectRecognition"/>
                                 <connections>
                                     <action selector="CustomObjectRecognitionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="4717"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4919">
-                                <rect key="frame" x="214" y="826" width="180" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4919" misplaced="YES">
+                                <rect key="frame" x="243" y="801" width="145" height="45"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0vx-JC-B27"/>
+                                    <constraint firstAttribute="width" constant="145" id="6XY-U1-htA"/>
+                                </constraints>
                                 <state key="normal" title="Show Sounds">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -86,6 +88,22 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="399" secondAttribute="bottom" constant="16" id="01D-dL-vSA"/>
+                            <constraint firstItem="733-qw-uI1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Jj-34-cGr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4919" secondAttribute="bottom" constant="16" id="8SB-aM-AWW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4919" secondAttribute="trailing" constant="6" id="8k4-AW-h1z"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4919" secondAttribute="bottom" constant="16" id="BT4-Aw-jac"/>
+                            <constraint firstItem="399" firstAttribute="top" secondItem="4713" secondAttribute="bottom" constant="32.670000000000002" id="FAk-0I-42J"/>
+                            <constraint firstItem="4713" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M3G-tX-hkh"/>
+                            <constraint firstItem="4713" firstAttribute="top" secondItem="733-qw-uI1" secondAttribute="bottom" constant="25" id="TWB-WD-dH9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4714" secondAttribute="trailing" constant="6" id="cki-ek-7rv"/>
+                            <constraint firstItem="399" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="of8-Mm-Aqd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4919" secondAttribute="trailing" constant="6" id="q8d-rc-IyI"/>
+                            <constraint firstItem="4714" firstAttribute="top" secondItem="IJP-ON-Iu7" secondAttribute="bottom" constant="20" id="rNF-xv-TqI"/>
+                            <constraint firstItem="4919" firstAttribute="top" secondItem="4714" secondAttribute="bottom" constant="22" id="uGU-FV-2GO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IJP-ON-Iu7" secondAttribute="trailing" constant="6" id="vzd-9E-raQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mainScreen" destination="8bC-Xf-vdC" id="name-outlet-8bC-Xf-vdC"/>
@@ -96,4 +114,18 @@
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
